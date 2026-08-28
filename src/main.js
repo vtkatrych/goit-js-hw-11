@@ -1,5 +1,3 @@
-import SimpleLightbox from 'simplelightbox';
-import 'simplelightbox/dist/simple-lightbox.min.css';
 import { getImagesByQuery } from './js/pixabay-api';
 import {
   createGallery,
@@ -13,13 +11,6 @@ import 'izitoast/dist/css/iziToast.min.css';
 
 const form = document.querySelector('.form');
 const input = document.querySelector('input[name="search-text"]');
-
-let lightbox = new SimpleLightbox('.gallery a', {
-  captionsData: 'alt',
-  captionDelay: 250,
-});
-
-lightbox.refresh();
 
 form.addEventListener('submit', event => {
   event.preventDefault();
