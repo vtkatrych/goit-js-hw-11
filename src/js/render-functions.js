@@ -1,4 +1,5 @@
 const galleryContainer = document.querySelector('.gallery');
+const loader = document.querySelector('.loader');
 
 export function createGallery(images) {
   const galleryMarkup = images
@@ -31,6 +32,10 @@ export function clearGallery() {
   galleryContainer.innerHTML = '';
 }
 
-export function showLoader() {}
+export function showLoader() {
+  loader.classList.add('is-active');
+}
 
-export function hideLoader() {}
+export function hideLoader() {
+  loader.classList.remove('is-active');
+}

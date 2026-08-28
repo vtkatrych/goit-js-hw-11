@@ -1,5 +1,5 @@
 import { getImagesByQuery } from './js/pixabay-api';
-import { createGallery, clearGallery } from './js/render-functions';
+import { createGallery, clearGallery, hideLoader } from './js/render-functions';
 
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
@@ -32,5 +32,8 @@ form.addEventListener('submit', event => {
     })
     .catch(error => {
       console.log(error);
+    })
+    .finally(() => {
+      hideLoader();
     });
 });
